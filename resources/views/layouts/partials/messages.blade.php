@@ -24,3 +24,11 @@
         </div>
     @endif
 @endif
+
+@if(Session::get('error', false))
+<?php $data = Session::get('error'); ?>
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-check"></i>
+        {{ $data }}
+    </div>
+@endif

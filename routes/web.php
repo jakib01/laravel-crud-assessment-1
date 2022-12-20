@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
-{   
+{
     /**
      * Home Routes
      */
@@ -40,5 +40,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Logout Routes
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+        Route::get('/employee/index', 'EmployeeController@index')->name('employee.index');
+        Route::get('/employee/create', 'EmployeeController@create')->name('employee.create');
+        Route::post('/employee/store', 'EmployeeController@store')->name('employee.store');
     });
 });

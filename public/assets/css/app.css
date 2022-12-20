@@ -38,3 +38,28 @@ main > .container {
 .dropdown-toggle {
   outline: 0;
 }
+
+
+/*employee form*/
+h1 {
+    margin-bottom: 40px;
+}
+
+.btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px;
+}
+
+.help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px;
+}
+
+.card{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*employee form*/

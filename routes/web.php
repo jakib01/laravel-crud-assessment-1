@@ -40,8 +40,16 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Logout Routes
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+
         Route::get('/employee/index', 'EmployeeController@index')->name('employee.index');
         Route::get('/employee/create', 'EmployeeController@create')->name('employee.create');
         Route::post('/employee/store', 'EmployeeController@store')->name('employee.store');
+        Route::get('/employee/edit/{id}', 'EmployeeController@edit')->name('employee.edit');
+        Route::put('/employee/update/{id}', 'EmployeeController@update')->name('employee.update');
+        Route::get('/employee/delete/{id}', 'EmployeeController@delete')->name('employee.delete');
+
+        Route::get('/todo/index', 'TodoApiController@index')->name('todo.index');
+        Route::get('/todo/call/api', 'TodoApiController@apiCall')->name('todo.apiCall');
+        Route::get('/todo/call/api/exportPdf', 'TodoApiController@exportPdf')->name('todo.apiCall.exportPdf');
     });
 });
